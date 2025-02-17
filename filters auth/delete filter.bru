@@ -1,0 +1,23 @@
+meta {
+  name: delete filter
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:4000/api/v1/filters/67b2776fa419c14017bbf8e3
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "url": "/special-events?buyIn=null&city=null&game=null&filter=null",
+    "type": "special",
+    "description": "test"
+  }
+}

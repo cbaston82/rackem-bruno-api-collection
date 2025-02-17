@@ -1,0 +1,23 @@
+meta {
+  name: create review
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:4000/api/v1/reviews/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "review": "testing 3",
+    "rating": "5",
+    "event": "633c96f4d55875bc785fc6b4"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: create filter
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:4000/api/v1/filters/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "url": "/special-events?buyIn=null&city=null&game=null&filter=null",
+    "type": "special",
+    "description": "test"
+  }
+}

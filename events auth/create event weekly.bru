@@ -1,0 +1,38 @@
+meta {
+  name: create event weekly
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:4000/api/v1/events/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "type": "weekly",
+    "title": "22222222",
+    "description": "Itaque non modi alia",
+    "pointOfContact": "Esse corrupti rerum",
+    "pointOfContactPhone": "(145) 510-3337",
+    "buyIn": 97,
+    "day": "Sunday",
+    "startTime": "13:30",
+    "venue": "Mollit quae lorem mo",
+    "address": "Perspiciatis eiusmo",
+    "city": "Quia non omnis aliqu",
+    "state": "Enim qui in autem qu",
+    "zipCode": "36136",
+    "phoneNumber": "+1 (164) 731-7907",
+    "ratingSystem": "Aut officia quibusda",
+    "game": "9-ball",
+    "posterImage": "",
+    "status": "active"
+  }
+}

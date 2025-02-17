@@ -1,0 +1,38 @@
+meta {
+  name: create event delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:4000/api/v1/events/67b270cddc5152ac48282a6c
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "type": "special",
+    "title": "5555555",
+    "description": "Itaque non modi alia",
+    "pointOfContact": "Esse corrupti rerum",
+    "pointOfContactPhone": "(145) 510-3337",
+    "buyIn": 97,
+    "startTime": "2000-02-11T00:56",
+    "endTime": "2012-12-07T04:39",
+    "venue": "Mollit quae lorem mo",
+    "address": "Perspiciatis eiusmo",
+    "city": "Quia non omnis aliqu",
+    "state": "Enim qui in autem qu",
+    "zipCode": "36136",
+    "phoneNumber": "+1 (164) 731-7907",
+    "ratingSystem": "Aut officia quibusda",
+    "game": "9-ball",
+    "posterImage": "",
+    "status": "active"
+  }
+}

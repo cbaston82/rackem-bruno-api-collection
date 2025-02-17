@@ -1,0 +1,23 @@
+meta {
+  name: patch a filter
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:4000/api/v1/filters/67b27722a419c14017bbf8dd
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "url": "/special-events?buyIn=null&city=null&game=null&filter=null",
+    "type": "special",
+    "description": "testing"
+  }
+}
